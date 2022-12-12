@@ -1,0 +1,10 @@
+.button:hover {
+    background-color: green;
+    color: white
+}
+
+@media (min-width: 768px) {
+    .pizzaMenu{
+        display: none
+    }
+}
