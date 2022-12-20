@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 150px 300PX 150PX;
+    grid-template-areas: 
+    "GN GN GN"
+    "YW RD BU"
+    "OE OE BU";    
+}
+
+#green {
+    grid-area: GN;
+}
+
+#yellow {
+    grid-area: YW;
+}
+
+#red {
+    grid-area: RD;
+}
+
+#blue {
+    grid-area: BU;
+}
+
+#orange {
+    grid-area: OE;
+}
+
+
