@@ -1,0 +1,50 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$font-size: 1rem;
+$font-size-footer: 24px;
+
+@mixin article-style($color, $border-color, $font-size) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+div {
+    border: 1px $color-primary solid;
+    h1 {
+        display: flex;
+        justify-content: center;
+        color: $color-tertiary;
+        text-decoration: underline;
+        text-decoration-color: $color-secondary;
+    }
+    .section-1 {
+        display: flex;
+        padding: 10px;
+        article {
+            border: 1px solid $color-tertiary;
+            padding: inherit;
+            text-align: center;
+            &:nth-child(odd) {
+                @include article-style($color-secondary, $color-tertiary, $font-size);
+            }
+            &:nth-child(even) {
+                @include article-style($color-primary, $color-tertiary, $font-size);
+            }
+        }
+    }
+    .section-2 {
+        display: flex;
+        padding: 10px;
+        article {
+            border:1px solid $color-secondary;
+            flex: 1;
+            p {
+                display: flex;
+                justify-content: center;
+                @include article-style($color-tertiary, $color-secondary, $font-size-footer)
+            }
+        }
+    }
+}
