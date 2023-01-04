@@ -1,0 +1,28 @@
+div {
+  border: 1px red solid;
+}
+div h1 {
+  text-align: center;
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+article {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+article section {
+  border: 1px solid green;
+  padding: inherit;
+  font-size: 25px;
+}
+article section .content1, article section .content3 {
+  color: blue;
+}
+article section .content2, article section .content4 {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
