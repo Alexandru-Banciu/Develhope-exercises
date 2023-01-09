@@ -1,0 +1,55 @@
+@use "variables.scss" as v;
+@use "functions.scss" as f;
+
+@mixin article-style($color, $border-color, $font-size) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+div {
+    border: 1px v.$color-primary solid;
+    h1 {
+        text-align: center;
+        color: v.$color-tertiary;
+        text-decoration: underline;
+        text-decoration-color: v.$color-secondary;
+    }
+    h2 {
+        @extend h1;
+        padding: 1rem;
+        border: 1px v.$color-primary solid;
+        max-width: fit-content;
+        position: relative;
+        left: 43%;
+        
+    }
+    .section-1 {
+        display: flex;
+        padding: 10px;
+        article {
+            border: 1px solid v.$color-tertiary;
+            padding: inherit;
+            text-align: center;
+            &:nth-child(odd) {
+                @include article-style(v.$color-secondary, v.$color-tertiary, v.$font-size-body);
+            }
+            &:nth-child(even) {
+                @include article-style(v.$color-primary, v.$color-tertiary, v.$font-size-body);
+            }
+        }
+    }
+    .section-2 {
+        display: flex;
+        padding: 10px;
+        article {
+            border:1px solid v.$color-secondary;
+            flex: 1;
+            p {
+                display: flex;
+                justify-content: center;
+                @include article-style(v.$color-tertiary, v.$color-secondary, f.px-to-rem(v.$font-size-footer));
+            }
+        }
+    }
+}
