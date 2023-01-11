@@ -1,0 +1,14 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$font-size-body: 1rem;
+$font-size-footer: 24px;
+$rem-font-size: 16px;
+$box-height: 45px;
+$box-width: $box-height;
+$base-background-color: white;
+$text-color: black;
+@function px-to-rem ($px-size) {
+    $rem-size: 16px; 
+    @return calc($px-size / $rem-size)rem;
+}
